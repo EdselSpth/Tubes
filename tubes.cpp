@@ -40,9 +40,18 @@ void addVertex(graph &G, string namaGedung){
     }
 }
 
+adrVertex findVertex(graph &G, string namaGedung){
+    // mencari vertex (gedung) yang memiliki nama yang sama dengan input
+    adrVertex P = firstVertex(G);
+    while(P!= NULL && namaGedung(P)!= namaGedung){
+        P = nextVertex(P);
+    }
+    return P;
+}
+
 void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int waktuTempuh){
     // menambahkan edge (jalan) ke graph
-    adrVertex V = findVertzex(G, gedungTujuan);
+    adrVertex V = findVertex(G, gedungTujuan);
     adrEdge E;
     createEdge(gedungTujuan, namaJalan, jarak, waktuTempuh, E);
     if(firstEdge(V) == NULL){
@@ -56,18 +65,11 @@ void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int wak
     }
 }
 
-adrVertex findVertex(graph &G, string namaGedung){
-    // mencari vertex (gedung) yang memiliki nama yang sama dengan input
-    adrVertex P = firstVertex(G);
-    while(P!= NULL && namaGedung(P)!= namaGedung){
-        P = nextVertex(P);
-    }
-    return P;
-}
+
 
 void findShortRoute(graph G, string gedungtertutup, string start, string end){
     // Menemukan Rute Terpendek
-    
+
 }
 
 void printGraph(graph G){
