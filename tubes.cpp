@@ -50,3 +50,12 @@ void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int wak
         nextEdge(P) = E;
     }
 }
+
+adrVertex findVertex(graph &G, string namaGedung){
+    adrVertex P = firstVertex(G);
+    while(P!= NULL && namaGedung(P)!= namaGedung){
+        P = nextVertex(P);
+    }
+    return P;
+}
+
