@@ -7,6 +7,7 @@
 #define firstEdge(V) V->firstEdge
 #define nextEdge(E) E->nextEdge
 #define gedungTujuan(E) E->gedungTujuan
+#define namaJalan(E) E->namaJalan
 #define jarak(E) E->jarak
 #define waktuTempuh(E) E->waktuTempuh
 using namespace std;
@@ -33,10 +34,10 @@ struct graph {
 };
 
 void createVertex(string namaGedung, adrVertex &V);
-void createEdge(string namaJalan, int jarak, int waktuTempuh, adrEdge &E);
+void createEdge(string gedungTujuan, string namaJalan, int jarak, int waktuTempuh, adrEdge &E);
 void initGraph(graph &G);
 void addVertex(graph &G, string namaGedung);
-void addEdge(graph &G, string namaJalan);
+void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int waktuTempuh);
 void buildGraph(graph &G);
 adrVertex findVertex(graph G, string namaGedung);
 adrEdge findEdge(adrVertex V, string namaJalan);
