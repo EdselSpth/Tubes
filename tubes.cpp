@@ -3,6 +3,7 @@
 using namespace std;
 
 void createVertex(string namaGedung, adrVertex &V){
+    // membuat vertex (gedung)
     V = new vertex;
     namaGedung(V) = namaGedung;
     nextVertex(V) = NULL;
@@ -10,6 +11,7 @@ void createVertex(string namaGedung, adrVertex &V){
 }
 
 void createEdge(string gedungTujuan, string namaJalan, int jarak, int waktuTempuh, adrEdge &E){
+    //membuat edge (jalan)
     E = new edge;
     gedungTujuan(E) = gedungTujuan;
     namaJalan(E) = namaJalan;
@@ -19,10 +21,12 @@ void createEdge(string gedungTujuan, string namaJalan, int jarak, int waktuTempu
 }
 
 void initGraph(graph &G){
+    // insiasi graph
     firstVertex(G) = NULL;
 }
 
 void addVertex(graph &G, string namaGedung){
+    // menambahkan vertex (gedung) ke graph
     adrVertex V;
     createVertex(namaGedung, V);
     if(firstVertex(G) == NULL){
@@ -37,6 +41,7 @@ void addVertex(graph &G, string namaGedung){
 }
 
 void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int waktuTempuh){
+    // menambahkan edge (jalan) ke graph
     adrVertex V = findVertex(G, gedungTujuan);
     adrEdge E;
     createEdge(gedungTujuan, namaJalan, jarak, waktuTempuh, E);
@@ -52,6 +57,7 @@ void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int wak
 }
 
 adrVertex findVertex(graph &G, string namaGedung){
+    // mencari vertex (gedung) yang memiliki nama yang sama dengan input
     adrVertex P = firstVertex(G);
     while(P!= NULL && namaGedung(P)!= namaGedung){
         P = nextVertex(P);
@@ -59,3 +65,7 @@ adrVertex findVertex(graph &G, string namaGedung){
     return P;
 }
 
+void findShortRoute(graph G, string gedungtertutup, string start, string end){
+    // Menemukan Rute Terpendek
+
+}
