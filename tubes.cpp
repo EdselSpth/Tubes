@@ -69,3 +69,18 @@ void findShortRoute(graph G, string gedungtertutup, string start, string end){
     // Menemukan Rute Terpendek
 
 }
+
+void printGraph(graph G){
+    // menampilkan graph
+
+}
+
+int calculateTotalDistance(graph G, string gedungAwal, string gedungTujuan){
+    // menghitung total jarak
+
+}
+
+int calculateTotalTime(graph G, string gedungAwal, string gedungTujuan){
+    // menghitung total waktu tempuh
+    
+}

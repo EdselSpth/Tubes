@@ -44,6 +44,6 @@ adrEdge findEdge(adrVertex V, string namaJalan, string namaGedung);
 void shortestPath(graph G, string gedungtertutup, string start, string destination);
 void findShortRoute(graph G, string start, string end);
 void printGraph(graph G);
-int calculateTotalDistance(graph G);
-int calculateTotalTime(graph G);
+int calculateTotalDistance(graph G, string gedungAwal, string gedungTujuan);
+int calculateTotalTime(graph G, string gedungAwal, string gedungTujuan);
 #endif // TUBES_H_INCLUDED
