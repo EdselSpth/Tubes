@@ -1,5 +1,5 @@
-#include "tubes.h"
 #include <iostream>
+#include "tubes.h"
 using namespace std;
 
 void createVertex(string namaGedung, adrVertex &V){
@@ -42,7 +42,7 @@ void addVertex(graph &G, string namaGedung){
 
 void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int waktuTempuh){
     // menambahkan edge (jalan) ke graph
-    adrVertex V = findVertex(G, gedungTujuan);
+    adrVertex V = findVertzex(G, gedungTujuan);
     adrEdge E;
     createEdge(gedungTujuan, namaJalan, jarak, waktuTempuh, E);
     if(firstEdge(V) == NULL){
@@ -67,7 +67,7 @@ adrVertex findVertex(graph &G, string namaGedung){
 
 void findShortRoute(graph G, string gedungtertutup, string start, string end){
     // Menemukan Rute Terpendek
-
+    
 }
 
 void printGraph(graph G){
@@ -82,5 +82,5 @@ int calculateTotalDistance(graph G, string gedungAwal, string gedungTujuan){
 
 int calculateTotalTime(graph G, string gedungAwal, string gedungTujuan){
     // menghitung total waktu tempuh
-    
+
 }
