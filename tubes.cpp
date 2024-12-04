@@ -84,28 +84,56 @@ void printGraph(graph G){
 
 int calculateTotalDistance(graph G, string gedungAwal, string gedungTujuan){
     // menghitung total jarak
+    int totalDistance = 0;
+    adrVertex Pawal = findVertex(G, gedungAwal);
+    if (Pawal == NULL){
+        cout << "Gedung awal tidak ditemukan" << endl;
+        return 0;
+    }
+    adrEdge Pedge = firstEdge(Pawal);
+    while (Pedge != NULL){
+        totalDistance += jarak(Pedge);
+        if(gedungTujuan(Pedge) == gedungTujuan){
+            return totalDistance;
+        }
+        Pedge = nextEdge(Pedge);
+    }
     
+    cout << "Tidak ditemukan rute dari gedung " << gedungAwal << "menuju " << gedungTujuan << endl;
+    return 0;
 }
 
 int calculateTotalTime(graph G, string gedungAwal, string gedungTujuan){
     // menghitung total waktu tempuh
-
+    int totalTime = 0;
+    adrVertex Pawal = findVertex(G, gedungAwal);
+    if (Pawal == NULL){
+        cout << "Gedung awal tidak ditemukan" << endl;
+        return 0;
+    }
+    adrEdge Pedge = firstEdge(Pawal);
+    while (Pedge != NULL){
+        totalTime += waktuTempuh(Pedge);
+        if(gedungTujuan(Pedge) == gedungTujuan){
+            return totalTime;
+        }
+        Pedge = nextEdge(Pedge);
+    }
+    
+    cout << "Tidak ditemukan rute dari gedung " << gedungAwal << "menuju " << gedungTujuan << endl;
+    return 0;
 }
 
 void printGraph(graph G){
     // menampilkan graph
-    adrVertex V = findVertex(G, gedungAwal);
-    adrEdge E = firstEdge(V);
-    while(E!= NULL){
-        cout << "Gedung: " << namaGedung(V) << ", Jalan: " << namaJalan(E) << ", Jarak: " << jarak(E) << " km" << endl;
-        E = nextEdge(E);
-    }
+   
 }
 
 void menu(){
     // menu program
-    cout << "(1) Cari Semua Rute Menuju Gedung" << endl;
-    cout << "(2) Cari Rute Terpendek Menuju Gedung" << endl;
+    cout << "(1) Print Seluruh Graph" << endl;
+    cout << "(2) Cari Semua Rute Menuju Gedung" << endl;
+    cout << "(3) Cari Rute Terpendek Menuju Gedung" << endl;
     cout << "(0) Keluar" << endl;
     cout << "Pilih menu: ";
 }
