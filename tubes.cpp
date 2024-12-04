@@ -51,10 +51,6 @@ adrVertex findVertex(graph &G, string namaGedung){
 
 void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int waktuTempuh){
     // menambahkan edge (jalan) ke graph
-<<<<<<< HEAD
-=======
-    int a = 1;
->>>>>>> f1c0ae95100bc19f23accc580801e19f33160f83
     adrVertex V = findVertex(G, gedungTujuan);
     adrEdge E;
     createEdge(gedungTujuan, namaJalan, jarak, waktuTempuh, E);
@@ -83,7 +79,7 @@ void printGraph(graph G){
 
 int calculateTotalDistance(graph G, string gedungAwal, string gedungTujuan){
     // menghitung total jarak
-
+    
 }
 
 int calculateTotalTime(graph G, string gedungAwal, string gedungTujuan){
