@@ -42,7 +42,7 @@ void addVertex(graph &G, string namaGedung){
 
 void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int waktuTempuh){
     // menambahkan edge (jalan) ke graph
-    adrVertex V = findVertzex(G, gedungTujuan);
+    adrVertex V = findVertex(G, gedungTujuan);
     adrEdge E;
     createEdge(gedungTujuan, namaJalan, jarak, waktuTempuh, E);
     if(firstEdge(V) == NULL){
