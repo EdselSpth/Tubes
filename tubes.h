@@ -41,9 +41,12 @@ void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int wak
 void buildGraph(graph &G);
 adrVertex findVertex(graph G, string namaGedung);
 adrEdge findEdge(adrVertex V, string namaJalan, string namaGedung);
-void shortestPath(graph G, string gedungtertutup, string start, string destination);
-void findShortRoute(graph G, string start, string end);
+void allRouteToBuilding(graph G, string gedungAwal, string gedungTujuan);
+void findShortRoute(graph G, string gedungAwal, string gedungTujuan);
 void printGraph(graph G);
 int calculateTotalDistance(graph G, string gedungAwal, string gedungTujuan);
 int calculateTotalTime(graph G, string gedungAwal, string gedungTujuan);
 #endif // TUBES_H_INCLUDED
+void menu ();
+void header();
+void footer();

@@ -65,11 +65,16 @@ void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int wak
     }
 }
 
+void buildGraph(graph &G){
+    // membangun graph
+    
+}
+
 
 
 void findShortRoute(graph G, string gedungtertutup, string start, string end){
     // Menemukan Rute Terpendek
-
+   
 }
 
 void printGraph(graph G){
@@ -85,4 +90,32 @@ int calculateTotalDistance(graph G, string gedungAwal, string gedungTujuan){
 int calculateTotalTime(graph G, string gedungAwal, string gedungTujuan){
     // menghitung total waktu tempuh
 
+}
+
+void printGraph(graph G){
+    // menampilkan graph
+    adrVertex V = findVertex(G, gedungAwal);
+    adrEdge E = firstEdge(V);
+    while(E!= NULL){
+        cout << "Gedung: " << namaGedung(V) << ", Jalan: " << namaJalan(E) << ", Jarak: " << jarak(E) << " km" << endl;
+        E = nextEdge(E);
+    }
+}
+
+void menu(){
+    // menu program
+    cout << "(1) Cari Semua Rute Menuju Gedung" << endl;
+    cout << "(2) Cari Rute Terpendek Menuju Gedung" << endl;
+    cout << "(0) Keluar" << endl;
+    cout << "Pilih menu: ";
+}
+
+void header(){
+    // header program
+    cout << "======================================================================="S << endl;
+}
+
+void footer(){
+    // footer program
+    cout << "======================================================================="S << endl;
 }
