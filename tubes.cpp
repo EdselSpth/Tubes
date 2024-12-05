@@ -67,14 +67,13 @@ void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int wak
 
 void buildGraph(graph &G){
     // membangun graph
+
 }
     
 
-
-
 void findShortRoute(graph G, string gedungtertutup, string start, string end){
-    // Menemukan Rute Terpendek
-   
+    // Menemukan Rute Terpendek pakai BFS
+    
 }
 
 void printGraph(graph G){
