@@ -44,7 +44,7 @@ adrVertex findVertex(graph &G, string namaGedung){
     // mencari vertex (gedung) yang memiliki nama yang sama dengan input
     adrVertex P = firstVertex(G);
     while(P!= NULL && ){
-        if (namaGedung(P)!= namaGedung){
+        if (namaGedung(P)== namaGedung){
             return P;
         }
         P = nextVertex(P);
