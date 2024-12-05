@@ -151,5 +151,5 @@ void footer(){
 
 void nama_kelompok(){
     cout  << "Edsel Septa Haryanto | 103022300016" << endl;
-    cout << "Muhammad Fauzan | 10302230000000 << endl;
+    cout << "Muhammad Fauzan | 10302230000000" << endl;
 }
