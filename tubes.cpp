@@ -43,10 +43,13 @@ void addVertex(graph &G, string namaGedung){
 adrVertex findVertex(graph &G, string namaGedung){
     // mencari vertex (gedung) yang memiliki nama yang sama dengan input
     adrVertex P = firstVertex(G);
-    while(P!= NULL && (namaGedung(P)!= namaGedung)){
+    while(P!= NULL && ){
+        if (namaGedung(P)!= namaGedung){
+            return P;
+        }
         P = nextVertex(P);
     }
-    return P;
+    return NULL;
 }
 
 void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int waktuTempuh){
