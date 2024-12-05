@@ -67,8 +67,8 @@ void addEdge(graph &G, string gedungTujuan, string namaJalan, int jarak, int wak
 
 void buildGraph(graph &G){
     // membangun graph
-    
 }
+    
 
 
 
@@ -146,4 +146,10 @@ void header(){
 void footer(){
     // footer program
     cout << "======================================================================="S << endl;
+
+}
+
+void nama_kelompok(){
+    cout  << "Edsel Septa Haryanto | 103022300016" << endl;
+    cout << "Muhammad Fauzan | 10302230000000 << endl;
 }

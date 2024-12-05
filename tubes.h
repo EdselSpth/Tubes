@@ -50,3 +50,4 @@ int calculateTotalTime(graph G, string gedungAwal, string gedungTujuan);
 void menu ();
 void header();
 void footer();
+void namaKelompok();
