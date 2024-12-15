@@ -4,6 +4,8 @@ using namespace std;
 
 int main()
 {
+    graph G;
+    buildGraph(G);
     header();
     namaKelompok();
     footer();
@@ -17,8 +19,7 @@ int main()
         cin >> pilihan;
         switch(pilihan){
             case 1:
-                cout << "Menu 1" << endl;
-                break;
+                printGraph(G);
             case 2:
                 cout << "Menu 2" << endl;
                 break;
@@ -30,6 +31,7 @@ int main()
                 break;
             default:
                 cout << "Pilihan tidak Valid" << endl;
-    
+
     }
+}
 }
