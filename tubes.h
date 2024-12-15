@@ -2,7 +2,7 @@
 #define TUBES_H_INCLUDED
 #include <iostream>
 #define firstVertex(G) G.firstVertex
-#define namaGedung(V) V->namaGedung
+#define namaTempat(V) V->namaTempat
 #define nextVertex(V) V->nextVertex
 #define firstEdge(V) V->firstEdge
 #define nextEdge(E) E->nextEdge
@@ -17,7 +17,7 @@ typedef struct vertex *adrVertex;
 typedef struct edge *adrEdge;
 
 struct vertex {
-    string namaGedung;
+    string namaTempat;
     adrVertex nextVertex;
     adrEdge firstEdge;
 };
@@ -46,8 +46,9 @@ adrEdge findEdge(adrVertex V, string namaJalan, string namaGedung);
 void allRouteToBuilding(graph G, string gedungAwal, string gedungTujuan);
 void findShortRoute(graph G, string gedungAwal, string gedungTujuan);
 void printGraph(graph G);
-int calculateTotalDistance(graph G, string gedungAwal, string gedungTujuan);
-int calculateTotalTime(graph G, string gedungAwal, string gedungTujuan);
+void deleteEdge(graph &G, string gedung);
+void deleteVertex(graph &G, string gedung);
+
 #endif // TUBES_H_INCLUDED
 void menu ();
 void header();
