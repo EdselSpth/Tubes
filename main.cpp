@@ -35,10 +35,10 @@ int main()
                 
                 break;
             case 3:
-                
                 cout << "Menu 3" << endl;
                 cout << "Mencari Rute Terpendek" << endl;
-                findShortRoute(G,gedungAwal,gedungTujuan);
+                
+                findShortRoute(G, gedungAwal, gedungTujuan);
                 break;
             case 4:
                 cout << "Menu 4" << endl;
@@ -77,6 +77,7 @@ int main()
             case 6:
                 cout << "Menu 6" << endl;
                 cout << "Menginformasikan gedung Maintenance atau nonaktif" << endl;
+
             case 0:
                 cout << "Keluar" << endl;
                 break;

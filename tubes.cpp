@@ -378,7 +378,24 @@ void printGraph(graph G) {
 }
 
 
+void allRoute(graph G, string gedungAwal, string gedungTujuan){
+    adrVertex dariGedung = findVertex(G, gedungAwal);
+    adrVertex keGedung = findVertex(G, gedungTujuan);
 
+    if (dariGedung == NULL && keGedung != NULL){
+        cout << "Gedung " << gedungAwal << " tidak ditemukan!" << endl;
+        return;
+    } else if (dariGedung != NULL && keGedung == NULL){
+        cout << "Gedung " << gedungTujuan << " tidak ditemukan!" << endl;
+        return;
+    }
+
+    string rute[100];
+    bool terkunjungi[100] = {false};
+
+    cout << "Semua Rute dari " << gedungAwal << " ke " << gedungTujuan << " : " << endl;
+    
+}
 
 
 void menu(){

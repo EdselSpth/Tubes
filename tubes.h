@@ -48,9 +48,10 @@ void findShortRoute(graph G, string gedungAwal, string gedungTujuan);
 void printGraph(graph G);
 void deleteEdge(graph &G, string gedung);
 void deleteVertex(graph &G, string gedung);
-
-#endif // TUBES_H_INCLUDED
 void menu ();
 void header();
 void footer();
 void namaKelompok();
+void allRoute(graph G, string gedungAwal, string gedungTujuan);
+void mencariRute(graph G, adrVertex gedungAwal, string gedungTujuan, string rute[], int panjangrRute, bool terkunjungi[], int totalJarak)
+#endif // TUBES_H_INCLUDED
