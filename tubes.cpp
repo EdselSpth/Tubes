@@ -393,17 +393,43 @@ void allRoute(graph G, string gedungAwal, string gedungTujuan){
     string rute[100];
     bool terkunjungi[100] = {false};
 
+    int totalJarak = 0;
+    int totalWaktu = 0;
+
     cout << "Semua Rute dari " << gedungAwal << " ke " << gedungTujuan << " : " << endl;
-    
+    mencariRute(G, dariGedung, gedungTujuan, rute, 0, terkunjungi, totalJarak, totalWaktu, 0, 0);
 }
 
-void mencariRute(graph G, adrVertex gedungAwal, string gedungTujuan, string rute[], int panjangRute, bool terkunjungi[], int &totalJarak, int &totalwaktu, int &jarak, int &waktu){
+void mencariRute(graph G, adrVertex gedungAwal, string gedungTujuan, string rute[], int panjangRute, bool terkunjungi[], int &totalJarak, int &totalwaktu, int jarak, int waktu){
     rute[panjangRute] = namaTempat(gedungAwal);
     panjangRute++;
     terkunjungi[panjangRute - 1] = true;
 
-    if 
+    if (namaTempat(gedungAwal) == gedungTujuan){
+        printRoute(rute, panjangRute, totalJarak, totalwaktu);
+    } else {
+        adrEdge E = firstEdge(gedungAwal);
+        while (E!= NULL) {
+            adrVertex tujuan = findVertex(G, gedungTujuan(E));
+            if (tujuan != NULL &&!terkunjungi[panjangRute - 1]) {
+                mencariRute(G, tujuan, gedungTujuan, rute, panjangRute, terkunjungi, totalJarak, totalWaktu, jarak + jarak(E), waktu + waktuTempuh(E));
+            }
+            E = nextEdge(E);
+        }
+    }
 }
+
+void printRoute(string rute[], int panjangRute, int totalJarak, int totalWaktu) {
+    // Menampilkan rute yang ditemukan
+    for (int i = 0; i < panjangRute; i++) {
+        cout << rute[i];
+        if (i < panjangRute - 1) {
+            cout << " -> ";
+        }
+    }
+    cout << "\nJarak: " << totalJarak << " km, Waktu: " << totalWaktu << " menit" << endl;
+    cout << "---------------------------" << endl;
+} 
 
 
 void menu(){
