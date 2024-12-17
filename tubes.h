@@ -53,5 +53,5 @@ void header();
 void footer();
 void namaKelompok();
 void allRoute(graph G, string gedungAwal, string gedungTujuan);
-void mencariRute(graph G, adrVertex gedungAwal, string gedungTujuan, string rute[], int panjangrRute, bool terkunjungi[], int totalJarak)
+void mencariRute(graph G, adrVertex gedungAwal, string gedungTujuan, string rute[], int panjangrRute, bool terkunjungi[], int &totalJarak, int &totalwaktu, int &jarak, int &waktu);
 #endif // TUBES_H_INCLUDED

@@ -397,6 +397,14 @@ void allRoute(graph G, string gedungAwal, string gedungTujuan){
     
 }
 
+void mencariRute(graph G, adrVertex gedungAwal, string gedungTujuan, string rute[], int panjangRute, bool terkunjungi[], int &totalJarak, int &totalwaktu, int &jarak, int &waktu){
+    rute[panjangRute] = namaTempat(gedungAwal);
+    panjangRute++;
+    terkunjungi[panjangRute - 1] = true;
+
+    if 
+}
+
 
 void menu(){
     // menu program
