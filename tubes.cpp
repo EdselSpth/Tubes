@@ -412,7 +412,7 @@ void mencariRute(graph G, adrVertex gedungAwal, string gedungTujuan, string rute
         while (E!= NULL) {
             adrVertex tujuan = findVertex(G, gedungTujuan(E));
             if (tujuan != NULL &&!terkunjungi[panjangRute - 1]) {
-                mencariRute(G, tujuan, gedungTujuan, rute, panjangRute, terkunjungi, totalJarak, totalWaktu, jarak + jarak(E), waktu + waktuTempuh(E));
+                mencariRute(G, tujuan, gedungTujuan, rute, panjangRute, terkunjungi, totalJarak, totalwaktu, jarak + jarak(E), waktu + waktuTempuh(E));
             }
             E = nextEdge(E);
         }
